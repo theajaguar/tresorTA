@@ -1,5 +1,5 @@
 const startDate = new Date("2025-07-06T00:00:00Z");
-const startAmount = 300;
+const startAmount = 350;
 const interestRate = 0.02;
 
 function updateCounter() {
