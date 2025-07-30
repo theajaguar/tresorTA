@@ -1,16 +1,31 @@
-const startDate = new Date("2025-07-06T00:00:00Z");
-const startAmount = 350;
+const part1 = {
+  amount: 300,
+  date: new Date("2025-07-06T00:00:00Z")
+};
+
+const part2 = {
+  amount: 50,
+  date: new Date("2025-07-30T00:00:00Z")
+};
+
 const interestRate = 0.02;
 
 function updateCounter() {
   const now = new Date();
-  const elapsedMs = now - startDate;
-  const elapsedYears = elapsedMs / (1000 * 60 * 60 * 24 * 365.25);
-  const newAmount = startAmount * Math.pow(1 + interestRate, elapsedYears);
+
+  const years1 = (now - part1.date) / (1000 * 60 * 60 * 24 * 365.25);
+  const years2 = (now - part2.date) / (1000 * 60 * 60 * 24 * 365.25);
+
+  const amount1 = part1.amount * Math.pow(1 + interestRate, years1);
+  const amount2 = part2.amount * Math.pow(1 + interestRate, years2);
+
+  const total = amount1 + amount2;
+
   const counter = document.getElementById("counter");
-  counter.textContent = newAmount.toFixed(8) + " €";
+  counter.textContent = total.toFixed(8) + " €";
+
   counter.classList.remove("animate");
-  void counter.offsetWidth; // trigger reflow
+  void counter.offsetWidth;
   counter.classList.add("animate");
 }
 
