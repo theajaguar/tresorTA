@@ -1,11 +1,11 @@
 const part1 = {
-  amount: 300,
+  amount: 350,
   date: new Date("2025-07-06T00:00:00Z")
 };
 
 const part2 = {
   amount: 50,
-  date: new Date("2025-07-30T00:00:00Z")
+  date: new Date("2025-08-16T00:00:00Z")
 };
 
 const interestRate = 0.02;
