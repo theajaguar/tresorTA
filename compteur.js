@@ -15,7 +15,8 @@ const part3 = {
 
 const part4 = {
   amount: 50,
-  date: new Date("2025-09-26T00:00:00Z")
+  date: new Date("2025-10-01T00:00:00Z") // tu peux changer la date exacte ici
+};
 
 const interestRate = 0.02;
 
@@ -25,17 +26,17 @@ function updateCounter() {
   const years1 = (now - part1.date) / (1000 * 60 * 60 * 24 * 365.25);
   const years2 = (now - part2.date) / (1000 * 60 * 60 * 24 * 365.25);
   const years3 = (now - part3.date) / (1000 * 60 * 60 * 24 * 365.25);
-  const years1 = (now - part4.date) / (1000 * 60 * 60 * 24 * 365.25);
+  const years4 = (now - part4.date) / (1000 * 60 * 60 * 24 * 365.25);
   
   const amount1 = part1.amount * Math.pow(1 + interestRate, years1);
   const amount2 = part2.amount * Math.pow(1 + interestRate, years2);
   const amount3 = part3.amount * Math.pow(1 + interestRate, years3);
-  const amount1 = part4.amount * Math.pow(1 + interestRate, years1);
+  const amount4 = part4.amount * Math.pow(1 + interestRate, years4);
 
   const total = amount1 + amount2 + amount3 + amount4;
 
   const counter = document.getElementById("counter");
-  counter.textContent = total.toFixed(8) + " €";
+  counter.textContent = total.toFixed(2) + " €"; // affichage avec 2 décimales
 
   counter.classList.remove("animate");
   void counter.offsetWidth;
