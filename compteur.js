@@ -15,7 +15,7 @@ const part3 = {
 
 const part4 = {
   amount: 50,
-  date: new Date("2025-10-01T00:00:00Z") // tu peux changer la date exacte ici
+  date: new Date("2025-10-01T00:00:00Z")
 };
 
 const interestRate = 0.02;
@@ -36,7 +36,7 @@ function updateCounter() {
   const total = amount1 + amount2 + amount3 + amount4;
 
   const counter = document.getElementById("counter");
-  counter.textContent = total.toFixed(2) + " €"; // affichage avec 2 décimales
+  counter.textContent = total.toFixed(2) + " €";
 
   counter.classList.remove("animate");
   void counter.offsetWidth;
