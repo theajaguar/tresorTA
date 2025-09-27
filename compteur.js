@@ -36,7 +36,7 @@ function updateCounter() {
   const total = amount1 + amount2 + amount3 + amount4;
 
   const counter = document.getElementById("counter");
-  counter.textContent = total.toFixed(2) + " €";
+  counter.textContent = total.toFixed(8) + " €";
 
   counter.classList.remove("animate");
   void counter.offsetWidth;
