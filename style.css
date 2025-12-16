@@ -81,15 +81,15 @@ p {
   object-fit: contain;
 }
 
-.compteur {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 4rem;        /* taille des chiffres */
-  font-weight: bold;
-  color: #00ffff;         /* adapte la couleur si tu veux */
+#counter {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 4rem !important;
+  font-weight: bold !important;
+  color: #00ffff !important;
   text-align: center;
 }
 
-.compteur.animate {
+#counter.animate {
   animation: pulse 0.3s ease-in-out;
 }
 
