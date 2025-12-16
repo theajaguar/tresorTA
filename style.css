@@ -80,3 +80,21 @@ p {
   max-height: 65vh;
   object-fit: contain;
 }
+
+.compteur {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;        /* taille des chiffres */
+  font-weight: bold;
+  color: #00ffff;         /* adapte la couleur si tu veux */
+  text-align: center;
+}
+
+.compteur.animate {
+  animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
