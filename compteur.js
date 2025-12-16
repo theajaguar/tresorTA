@@ -8,20 +8,23 @@ const contributions = [
 
 const interestRate = 0.02;
 
-function updateCounter() {
+function updateCompteur() {
   const now = new Date();
   let total = 0;
 
   contributions.forEach(part => {
-    const years =
-      (now - part.date) / (1000 * 60 * 60 * 24 * 365.25);
-
+    const years = (now - part.date) / (1000 * 60 * 60 * 24 * 365.25);
     total += part.amount * Math.pow(1 + interestRate, years);
   });
 
-  const counter = document.getElementById("counter");
-  counter.textContent = total.toFixed(7) + " €";
+  const compteur = document.getElementById("compteur");
+  compteur.textContent = total.toFixed(7) + " €";
+
+  // Si tu as une animation CSS "animate"
+  compteur.classList.remove("animate");
+  void compteur.offsetWidth;
+  compteur.classList.add("animate");
 }
 
-setInterval(updateCounter, 1000);
-updateCounter();
+setInterval(updateCompteur, 1000);
+updateCompteur();
